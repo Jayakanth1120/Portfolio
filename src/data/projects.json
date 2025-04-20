@@ -1,26 +1,10 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
+    "title": "Actavivo",
+    "imageSrc": "projects/Actavivo_logo.jpg",
+    "description": "A modern social media platform featuring real-time interactions, news feed, stories, and direct messaging. Built with React and TypeScript for the frontend and .NET for the backend, providing users with a seamless social networking experience.",
+    "skills": ["React", "Typescript", ".Net"],
+    "demo": "https://actavivo.com/",
     "source": "https://www.github.com"
   }
 ]
