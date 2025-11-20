@@ -13,7 +13,7 @@ const Projects = () => {
       title: 'Actavivo',
       description: 'A free team communication app that helps teams collaborate and stay connected. Built with modern web technologies for seamless user experience.',
       tech: ['Html', 'Css', 'Javascript', 'React', 'Redux', 'Firebase', 'Helcim Payment Gateway'],
-      demo: 'https://demo.com',
+      demo: 'https://actavivo.com/',
       image: 'https://auth.actavivo.com/css/actavivopublicicon.png',
     },
     {
