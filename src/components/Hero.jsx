@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import resumePdf from '../assets/Jayakanth-B-Resume.pdf';
 
 const Hero = () => {
   const constraintsRef = useRef(null);
@@ -29,10 +30,9 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: FaEnvelope, href: 'mailto:your.email@example.com', label: 'Email' },
+    { icon: FaGithub, href: 'https://github.com/Jayakanth1120', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/jayakanth-b-757070296/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
+    { icon: FaEnvelope, href: 'mailto:jayakanthboopathi@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -77,9 +77,8 @@ const Hero = () => {
               View My Work
             </motion.a>
             <motion.a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={resumePdf}
+              download="Jayakanth-B-Resume.pdf"
               className="btn btn-secondary cursor-hover"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -122,7 +121,7 @@ const Hero = () => {
         >
           <div className="hero-image-container">
             <img 
-              src="/jayakanth.jpg" 
+              src="/jayakanth.png" 
               alt="Jayakanth - Frontend Developer" 
               className="hero-image"
               onError={(e) => {

@@ -26,7 +26,7 @@ const Contact = () => {
     {
       icon: FaMapMarkerAlt,
       title: 'ADDRESS',
-      details: ['6/B,Pallipalayam, Namakkal', 'TamilNadu- 638008'],
+      details: ['6/B,Pallipalayam, Namakkal', 'TamilNadu- 638006'],
       link: 'https://www.google.com/maps/search/?api=1&query=6/B,Pallipalayam,Namakkal,TamilNadu+638008',
       action: 'View on Map'
     },

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import GlassCard from './GlassCard';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = () => {
   const ref = useRef(null);
@@ -13,28 +13,16 @@ const Projects = () => {
       title: 'Actavivo',
       description: 'A free team communication app that helps teams collaborate and stay connected. Built with modern web technologies for seamless user experience.',
       tech: ['Html', 'Css', 'Javascript', 'React', 'Redux', 'Firebase', 'Helcim Payment Gateway'],
-      github: 'https://github.com',
       demo: 'https://demo.com',
       image: 'https://auth.actavivo.com/css/actavivopublicicon.png',
-
     },
     {
-      title: 'E-Commerce Platform',
-      description: 'Modern e-commerce solution with cart, checkout, and payment integration',
-      tech: ['React', 'Redux', 'Firebase', 'Stripe'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      image: 'https://via.placeholder.com/800x400?text=E-Commerce',
-      color: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)'
-    },
-    {
-      title: 'Task Management App',
-      description: 'Collaborative task management with real-time updates and drag-drop',
-      tech: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      image: 'https://via.placeholder.com/800x400?text=Task+App',
-      color: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)'
+      title: 'Reality Works AI',
+      description: 'RealityWorks AI is a medical training companion that merges immersive UI with AI-driven mentoring to guide students through complex clinical flows.',
+      tech: ['React', 'Next.js', 'Tailwind CSS', 'Shadcn UI', 'TypeScript', 'Nest.js', 'Python'],
+      demo: 'https://tutorpatient.com/',
+      image: 'https://img.freepik.com/premium-photo/ai-artificial-intelligence-future-technology-icon-design_749601-5162.jpg',
+      color: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
     },
   ];
 
@@ -75,17 +63,6 @@ const Projects = () => {
                 </div>
                 <div className="project-overlay">
                   <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link cursor-hover"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    aria-label="GitHub"
-                  >
-                    <FaGithub />
-                  </motion.a>
-                  <motion.a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -99,8 +76,31 @@ const Projects = () => {
                 </div>
               </div>
               <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
+                <h3 className="project-title">
+                  {project.demo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-title-link cursor-hover"
+                    >
+                      {project.title}
+                    </a>
+                  ) : (
+                    project.title
+                  )}
+                </h3>
                 <p className="project-description">{project.description}</p>
+                {project.aiFeatures && (
+                  <div className="project-ai">
+                    <span className="ai-badge">AI Stack</span>
+                    <ul className="project-ai-list">
+                      {project.aiFeatures.map((feature, featureIndex) => (
+                        <li key={featureIndex}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div className="project-tech">
                   {project.tech.map((tech, techIndex) => (
                     <span key={techIndex} className="tech-tag">{tech}</span>
